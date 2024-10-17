@@ -68,3 +68,51 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Installation
+
+Prerequisites
+Before you begin, ensure you have the following installed:
+
+Node.js (v14.x or above)
+MongoDB (Local or MongoDB Atlas)
+
+
+#Backend Setup
+Clone the repository:
+git clone https://github.com/your-repo-url.git
+cd your-repo
+
+Install the backend dependencies:
+cd backend
+npm install
+
+#Frontend Setup
+Navigate to the frontend folder and install dependencies
+cd ../frontend
+npm install
+
+#Environment Variables
+You need to set up the following environment variables:
+
+Backend (.env file in the backend folder)
+
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/yourdbname
+MONGO_ATLAS_URI=mongodb+srv://username:password@cluster.mongodb.net/yourdbname
+SENDGRID_API_KEY=your-sendgrid-api-key
+EMAIL_SENDER=your-email@gmail.com
+
+
+#API Documentation
+Base URL:
+The base URL for the API is: http://localhost:5000/api/user
+
+Endpoints:
+POST /signup: Register a new user with OTP verification.
+POST /login: Log in an existing user.
+POST /forgot-password: Request a password reset email.
+POST /reset-password: Reset the password using the OTP sent via email.
+PUT /update-profile: Update the user's profile information
+
+
+
